@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">My Word Counter App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="# navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"> <a class="nav-link" href="#">Home <span
+                            class="sr-only">(current)</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+                <li class="nav-item"> <a class="nav-link disabled" href="#">Link Disabled</a> </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+        <textarea name="" class="form-control form-control-lg" id="text" cols="50" rows="10"
+            placeholder="Enter Text here"></textarea>
+        <br>
+        <p id="displaydata"></p>
+        <br>
+        <button class="btn btn-primary" onclick="Count()">Count Words</button>
+    </div>
+
+
+
+
+
+    <script>
+
+
+
+        function Count() {
+
+            let data = document.getElementById("text").value;
+            let words = data.match(/\w+/g);
+            words = words.length;
+            console.log(words);
+
+
+            let charr = document.getElementById("text").value.length;
+
+            let display = document.getElementById("displaydata").innerHTML = "<b>Number of Words<b>  " + words + "<br><b>Number of Charactertics<b>  " + charr;
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
